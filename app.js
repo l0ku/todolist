@@ -29,7 +29,7 @@ async function main() {
 
 	// Connects to Atlas
 	await mongoose.connect(
-		`mongodb+srv://admin:administradormongo1@cluster0.dz2qmae.mongodb.net/todolistDB?retryWrites=true`
+		`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.dz2qmae.mongodb.net/todolistDB?retryWrites=true`
 	);
 
 	const itemsSchema = new Schema({
